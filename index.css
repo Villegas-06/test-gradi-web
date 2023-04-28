@@ -1,5 +1,5 @@
-body{
-    background-color: #FFFFFF;
+body {
+  background-color: #ffffff;
 }
 
 .mainHeader {
@@ -35,9 +35,8 @@ section.preProducts > p.text {
 
   display: flex;
   justify-content: center;
-  
-  width: 60%;
 
+  width: 60%;
 }
 
 section.preProducts > div.buttons {
@@ -49,7 +48,7 @@ section.preProducts div.bgButtonPrev,
 section.preProducts div.bgButtonNext {
   width: 70px;
   height: 22px;
-  background-color: #FFDCD3;
+  background-color: #ffdcd3;
   border-radius: 100px;
 }
 
@@ -68,8 +67,85 @@ section.preProducts > div.buttons button {
   top: -28%;
   left: 24%;
 }
-div.containerItems > .containerImg{
-    position: relative;
-    top: 50%;
-    left: 50%;
+
+.containerProducts {
+  margin-top: 5%;
+  display: flex;
 }
+
+.containerProducts > .product {
+  margin-left: 10px;
+}
+
+.product button {
+  display: block;
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+
+  top: -10%;
+  left: 3%;
+
+  width: 297px;
+  height: 30px;
+
+  border-radius: 100px;
+  border: none;
+
+  background-color: white;
+  color: #efa693;
+  font-weight: 700;
+}
+
+.infoProduct {
+  margin-left: 5px;
+  display: inline-block;
+  position: relative;
+  top: -4%;
+}
+
+.infoProduct > .nameProduct {
+  width: 234px;
+  height: 24px;
+
+  font-family: "Filson Pro";
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+}
+
+.rateValue {
+  display: flex;
+}
+
+.rateValue > .rate {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.rateValue > .price {
+  margin-left: 30%;
+}
+
+.rateValue > .rate {
+  display: flex;
+}
+
+form {
+  display: flex;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+
+
+label {
+
+}
+
+
