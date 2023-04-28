@@ -1,0 +1,69 @@
+body{
+    background-color: #FFFFFF;
+}
+
+.mainHeader {
+  background-color: #ffdcd3;
+  color: #444950;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 32px;
+}
+
+.mainHeader > p {
+  width: 318px;
+  height: 16px;
+
+  font-family: "Abhaya Libre";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section.preProducts {
+  display: grid;
+  column-gap: 50px;
+
+  width: 80%;
+}
+
+section.preProducts > p.text {
+  font-size: 44px;
+  font-family: "Abhaya Libre";
+
+  display: flex;
+  justify-content: center;
+  
+  width: 60%;
+
+}
+
+section.preProducts > div.buttons {
+  display: flex;
+  justify-content: right;
+}
+
+section.preProducts div.bgButtonPrev,
+section.preProducts div.bgButtonNext {
+  width: 70px;
+  height: 24px;
+  background-color: #FFDCD3;
+  border-radius: 100px;
+}
+
+section.preProducts > div.buttons button {
+  width: 39.5px;
+  height: 39.5px;
+  background-color: #ffffff;
+
+  color: #555b64;
+  border-radius: 20px;
+  border: none;
+  justify-content: center;
+
+  position: relative;
+  top: -20%;
+  left: 24%;
+}
