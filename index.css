@@ -48,7 +48,7 @@ section.preProducts > div.buttons {
 section.preProducts div.bgButtonPrev,
 section.preProducts div.bgButtonNext {
   width: 70px;
-  height: 24px;
+  height: 22px;
   background-color: #FFDCD3;
   border-radius: 100px;
 }
@@ -58,12 +58,18 @@ section.preProducts > div.buttons button {
   height: 39.5px;
   background-color: #ffffff;
 
-  color: #555b64;
+  color: black;
+  font-weight: 600;
   border-radius: 20px;
   border: none;
   justify-content: center;
 
   position: relative;
-  top: -20%;
+  top: -28%;
   left: 24%;
+}
+div.containerItems > .containerImg{
+    position: relative;
+    top: 50%;
+    left: 50%;
 }
