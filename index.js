@@ -98,7 +98,7 @@ btnPrev.addEventListener("click", function (e) {
                     The Multi-managed Snowboard
                 </div>
                 <div class="rateValue"> 
-                  <fieldset class="val-fieldset"><legend>Calificación:</legend><span class="valoracion val-${tag}"></span></fieldset>
+                  <fieldset class="val-fieldset"><span class="valoracion val-${tag}"></span></fieldset>
                   <p class="tag"> (${sellTag}) </p>
                   <p class="price">
                     €${price}
