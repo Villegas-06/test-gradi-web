@@ -44,16 +44,53 @@ btnPrev.addEventListener("click", function (e) {
     const img = arrProducts[i].featuredImage.url;
     const title = arrProducts[i].title;
     const id = arrProducts[i].id.split("Product/")[1];
-    const tag = arrProducts[i].tags[0];
+    const sellTag = arrProducts[i].tags[0];
+    let tag = arrProducts[i].tags[0];
     const price = arrProducts[i].prices.max.amount;
 
-    console.log(id);
+    console.log(tag);
+
+    switch (true) {
+      case tag < 100:
+        tag = 10;
+        console.log("1 Star");
+        break;
+
+      case tag >= 100 && tag < 200:
+        tag = 20;
+        console.log("2 Star");
+        break;
+
+      case tag >= 200 && tag < 300:
+        tag = 30;
+        console.log("3 Star");
+        break;
+
+      case tag >= 300 && tag < 400:
+        tag = 40;
+        console.log("4 Star");
+        break;
+
+      case tag >= 400 && tag <= 500:
+        tag = 50;
+        console.log("5 Star");
+        break;
+
+      default:
+        console.log("No star");
+        break;
+    }
+
+    console.log("STAR: " + tag);
+
+    //console.log(id);
 
     if (id.indexOf("8141368492342") == -1) {
       setImg.innerHTML += `
         <div class="product" id="${id}">
-
-            <img src="${img}" alt="${title}" />
+            <div class="slide">
+              <img src="${img}" alt="${title}" />
+            </div>
             <button class="addToCart">Add to cart</button>
            
             <div class="infoProduct">
@@ -61,32 +98,13 @@ btnPrev.addEventListener("click", function (e) {
                     The Multi-managed Snowboard
                 </div>
                 <div class="rateValue"> 
-                    <p class="rate"> 
-                        <form>
-                            <p class="rateStar">
-                                <input id="radio1" type="radio" name="estrellas" value="5">
-                                <label for="radio1">★</label>
-                                <input id="radio2" type="radio" name="estrellas" value="4">
-                                <label for="radio2">★</label>
-                                <input id="radio3" type="radio" name="estrellas" value="3">
-                                <label for="radio3">★</label>
-                                <input id="radio4" type="radio" name="estrellas" value="2">
-                                <label for="radio4">★</label>
-                                <input id="radio5" type="radio" name="estrellas" value="1">
-                                <label for="radio5">★</label>
-                            </p>
-
-                            <p class="tag"> 
-                                (${tag})
-                            </p
-                        </form>
-                    </p>
-                    <p class="price">
-                        €${price}
-                    </p>
+                  <fieldset class="val-fieldset"><legend>Calificación:</legend><span class="valoracion val-${tag}"></span></fieldset>
+                  <p class="tag"> (${sellTag}) </p>
+                  <p class="price">
+                    €${price}
+                  </p>
                 </div>
             </div>
-
         </div>`;
     }
   }

@@ -133,19 +133,44 @@ section.preProducts > div.buttons button {
   display: flex;
 }
 
-form {
-  display: flex;
+.val-fieldset {
+  width: 100px;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+.valoracion {
+  width: 100px;
+  height: 21px;
+  display: block;
+  background: url(http://lh5.googleusercontent.com/-Sp-iHFztZdc/UVD89O9oM1I/AAAAAAAAEU0/Xh-FBDaWyJY/s000/estrellas.png)
+    0 0 no-repeat;
+}
+.val-0 {
+  background-position: -100px -0;
+}
+
+.val-10 {
+  background-position: -81px 0;
+}
+
+.val-20 {
+  background-position: -60px 0;
+}
+
+.val-40 {
+  background-position: -21px 0;
+}
+
+.val-50 {
+  background-position: 0 0;
+}
+
+.rateValue > .tag{
+  margin-top: 22px;
 }
 
 
-input[type="radio"] {
-  display: none;
+.rateValue > .price{
+  margin-top: 22px;
 }
-
-
-
-label {
-
-}
-
-
