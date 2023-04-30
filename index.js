@@ -1,6 +1,11 @@
-(async function () {
-  const setImg = document.querySelector(".containerProducts");
+//Set the function to get API.
 
+(async function () {
+
+  //call the container to get the conection with the DOM.
+  const setProducts = document.querySelector(".containerProducts");
+
+  //call the endpoint
   const resp = await fetch(
     "https://gradistore-spi.herokuapp.com/products/all",
     {
@@ -12,9 +17,12 @@
     }
   );
 
+  //save the result to variable
   const result = await resp.json();
 
   const arrProducts = result.products.nodes;
+
+  //loop for set the products in the DOM.
 
   for (let i = 0; i < arrProducts.length; i++) {
     const img = arrProducts[i].featuredImage.url;
@@ -25,19 +33,26 @@
 
     const finalTag = [];
 
+    //loop to the "tags" for get the value for calculate the rate
+
     for (let x = 0; x < rateValue.length; x++) {
       if (rateValue[x].match(/^[0-9]+$/)) {
         finalTag.push(parseInt(rateValue[x]));
       }
     }
 
+    //loop the result for get the average
     let tag = parseInt(
       finalTag.reduce((previousValue, currentValue) => {
         return previousValue + currentValue;
       }) / finalTag.length
     );
 
+    //make the varible for the exactly result
+
     let sellTag = tag;
+
+    //make the conditional to set the stars for products
 
     switch (true) {
       case tag < 100:
@@ -65,8 +80,13 @@
         break;
     }
 
+    //make the conditional for exclude product without image
+
     if (id.indexOf("8141368492342") == -1) {
-      setImg.innerHTML += `
+
+      //set the products in the DOM
+
+      setProducts.innerHTML += `
         <div class="product" id="${id}">
             <div class="slide">
               <img src="${img}" alt="${title}" />
@@ -88,6 +108,8 @@
         </div>`;
     }
   }
+
+  //create a varible for make the transitions
 
   const slides = document.querySelectorAll(".product");
 
