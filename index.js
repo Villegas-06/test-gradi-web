@@ -1,6 +1,6 @@
 (async function () {
   const setImg = document.querySelector(".containerProducts");
-  
+
   const resp = await fetch(
     "https://gradistore-spi.herokuapp.com/products/all",
     {
@@ -20,9 +20,24 @@
     const img = arrProducts[i].featuredImage.url;
     const title = arrProducts[i].title;
     const id = arrProducts[i].id.split("Product/")[1];
-    const sellTag = arrProducts[i].tags[0];
-    let tag = arrProducts[i].tags[0];
+    const rateValue = arrProducts[i].tags;
     const price = arrProducts[i].prices.max.amount;
+
+    const finalTag = [];
+
+    for (let x = 0; x < rateValue.length; x++) {
+      if (rateValue[x].match(/^[0-9]+$/)) {
+        finalTag.push(parseInt(rateValue[x]));
+      }
+    }
+
+    let tag = parseInt(
+      finalTag.reduce((previousValue, currentValue) => {
+        return previousValue + currentValue;
+      }) / finalTag.length
+    );
+
+    let sellTag = tag;
 
     switch (true) {
       case tag < 100:
@@ -50,8 +65,6 @@
         break;
     }
 
-    //console.log(id);
-
     if (id.indexOf("8141368492342") == -1) {
       setImg.innerHTML += `
         <div class="product" id="${id}">
@@ -62,7 +75,7 @@
            
             <div class="infoProduct">
                 <div class="nameProduct">
-                    The Multi-managed Snowboard
+                    ${title}
                 </div>
                 <div class="rateValue"> 
                   <fieldset class="val-fieldset"><span class="valoracion val-${tag}"></span></fieldset>
@@ -78,7 +91,7 @@
 
   const slides = document.querySelectorAll(".product");
 
-  // loop through slides and set each slides translateX property to index * 100% 
+  // loop through slides and set each slides translateX property to index * 100%
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${indx * 100}%)`;
   });
@@ -115,7 +128,7 @@
     if (curSlide === 0) {
       curSlide = maxSlide;
     } else {
-      curSlide --;
+      curSlide--;
     }
 
     //   move slide by 100%
@@ -123,6 +136,4 @@
       slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
   });
-
-
 })();
