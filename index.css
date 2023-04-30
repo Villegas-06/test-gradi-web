@@ -381,9 +381,6 @@ div.info {
   color: #939393;
 }
 
-.form input::-webkit-input-placeholder {
-}
-
 .form button {
   width: 119px;
   height: 48px;
