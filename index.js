@@ -168,7 +168,6 @@ let modal = document.querySelector("#myModal");
 
 // Get the button that opens the modal
 let sendNewsLetter = document.querySelector(".form button");
-console.log(sendNewsLetter);
 
 // Get the <span> element that closes the modal
 let closeModal = document.querySelector(".modalContent span");
