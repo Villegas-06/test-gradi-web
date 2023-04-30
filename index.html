@@ -3,18 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link rel="stylesheet" href="index.css" />
     <title>Gradiweb</title>
   </head>
-
-  <script>
-    const width = screen.width;
-    const height = screen.height;
-
-    document.querySelector("body").style.width = width;
-    document.querySelector("body").style.height = height;
-  </script>
 
   <body>
     <header class="mainHeader">
@@ -37,16 +29,6 @@
     </section>
 
     <div class="containerProducts"></div>
-
-
-    
-          
-          
-    <div class="pastilla1"></div>
-    <div class="pastilla2"></div>
-    <div class="pastilla3"></div>
-    <div class="pastilla4"></div>
-    <div class="pastilla5"></div>
     
     <div class="aferProducts">
       <div class="allProducts">
@@ -73,5 +55,19 @@
     </div>
 
     <script src="./index.js"></script>
+
+    <script>
+    
+      const width = screen.width;
+      const height = screen.height;
+  
+      document.querySelector("body").style.width = width;
+      document.querySelector("body").style.height = height;
+  
+      console.log(width);
+      console.log(height);
+      
+    </script>
+
   </body>
 </html>

@@ -1,28 +1,6 @@
-const btnNext = document.querySelector(".bgButtonNext > button.next");
-
-console.log(btnNext);
-
-btnNext.addEventListener("click", function (e) {
-  if (btnNext.click) {
-    console.log("click next");
-  }
-});
-
-const btnPrev = document.querySelector(".bgButtonPrev > button.previous");
-
-console.log(btnPrev);
-
-btnPrev.addEventListener("click", function (e) {
-  if (btnNext.click) {
-    console.log("click prev");
-  }
-});
-
 (async function () {
   const setImg = document.querySelector(".containerProducts");
-
-  console.log(setImg);
-
+  
   const resp = await fetch(
     "https://gradistore-spi.herokuapp.com/products/all",
     {
@@ -38,8 +16,6 @@ btnPrev.addEventListener("click", function (e) {
 
   const arrProducts = result.products.nodes;
 
-  console.log(arrProducts);
-
   for (let i = 0; i < arrProducts.length; i++) {
     const img = arrProducts[i].featuredImage.url;
     const title = arrProducts[i].title;
@@ -48,40 +24,31 @@ btnPrev.addEventListener("click", function (e) {
     let tag = arrProducts[i].tags[0];
     const price = arrProducts[i].prices.max.amount;
 
-    console.log(tag);
-
     switch (true) {
       case tag < 100:
         tag = 10;
-        console.log("1 Star");
         break;
 
       case tag >= 100 && tag < 200:
         tag = 20;
-        console.log("2 Star");
         break;
 
       case tag >= 200 && tag < 300:
         tag = 30;
-        console.log("3 Star");
         break;
 
       case tag >= 300 && tag < 400:
         tag = 40;
-        console.log("4 Star");
         break;
 
       case tag >= 400 && tag <= 500:
         tag = 50;
-        console.log("5 Star");
         break;
 
       default:
-        console.log("No star");
+        tag = 0;
         break;
     }
-
-    console.log("STAR: " + tag);
 
     //console.log(id);
 
