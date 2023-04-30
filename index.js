@@ -137,3 +137,54 @@
     });
   });
 })();
+
+
+//function modal
+
+// Get the modal
+let modal = document.querySelector("#myModal");
+
+// Get the button that opens the modal
+let sendNewsLetter = document.querySelector(".form button");
+console.log(sendNewsLetter);
+
+// Get the <span> element that closes the modal
+let closeModal = document.querySelector(".modalContent span");
+
+// When the user clicks on the button, open the modal
+sendNewsLetter.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeModal.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+//configure the form
+
+const form = document.querySelector("div.form form");
+
+//Get the selector for set email
+
+const emailModal = document.querySelector("#emailModal");
+
+sendNewsLetter.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const email = form["email"].value;
+
+  if(email.indexOf("@") > -1){
+    emailModal.innerText = email;
+  }else{
+    emailModal.innerHTML = "Doesn´t get email. <br /> Please insert a valid email"
+  }
+})

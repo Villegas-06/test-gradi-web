@@ -46,13 +46,24 @@
             <p>promotions or our future products</p>
           </div>
           <div class="form">
-            <form action="#" method="get">
-              <input type="email" placeholder="Your Email" />
+            <form action="#" method="get" onsubmit="return false;">
+              <input type="email" placeholder="Your Email" id="email"/>
               <button type="submit">SEND</button>
             </form>
           </div>
       </footer>
     </div>
+
+    <div id="myModal" class="modal">
+
+      <div class="modalContent">
+        <span class="close">&times;</span>
+        <p>Suscribe with email: </p>
+        <p id="emailModal"></p>
+      </div>
+
+    </div>
+
 
     <script src="./index.js"></script>
 
