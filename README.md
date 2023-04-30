@@ -21,3 +21,5 @@ A tener en cuenta:
     5. Se intenta para las tipografías usar google fonts pero la importación de este muchas veces no funciona, se podría usar si se importa una a una con google fonts u otro sistema de fuentes.
 
 La página fue diseñada por completo con HTML, CSS y JS, evitando el uso de librerias (tailwind, bootstrap, bulma) y el uso de framework (React, Vue JS).
+
+Cualquier duda se puede comunicar con el dueño del repositorio.
