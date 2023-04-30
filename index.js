@@ -169,7 +169,7 @@ window.onclick = function(event) {
 }
 
 
-//configure the form
+//Configure the form
 
 const form = document.querySelector("div.form form");
 
@@ -185,6 +185,7 @@ sendNewsLetter.addEventListener('click', (e) => {
   if(email.indexOf("@") > -1){
     emailModal.innerText = email;
   }else{
-    emailModal.innerHTML = "Doesn´t get email. <br /> Please insert a valid email"
+    alert("Doesn´t get email. Please insert a valid email");
+    modal.style.display = "none";
   }
 })

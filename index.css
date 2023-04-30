@@ -85,8 +85,7 @@ body {
 }
 
 @media (max-width: 550px) {
-
-  .preProducts{
+  .preProducts {
     padding-left: 8%;
   }
 
@@ -173,6 +172,7 @@ body {
 @media (max-width: 550px) {
   .containerProducts {
     margin-top: 15%;
+    overflow-x: visible;
   }
 
   .slide img {
@@ -271,14 +271,14 @@ body {
 }
 
 .aferProducts {
-  margin-top: 25%;
+  margin-top: 17%;
 }
 
 /*margen al botón responsive*/
 
 @media (max-width: 550px) {
   .aferProducts {
-    margin-top: 60%;
+    margin-top: 25%;
   }
 }
 
@@ -302,7 +302,7 @@ body {
 }
 
 .mainFooter {
-  margin-top: 10%;
+  margin-top: 7%;
 
   width: auto;
   height: 550px;
@@ -373,6 +373,8 @@ div.info {
   width: 360px;
   height: 48px;
 
+  padding-left: 30px;
+
   border-radius: 100px;
   border: none;
 
@@ -380,7 +382,6 @@ div.info {
 }
 
 .form input::-webkit-input-placeholder {
-  padding-left: 25px;
 }
 
 .form button {
@@ -411,29 +412,38 @@ div.info {
     width: auto;
     height: auto;
   }
-}
 
+  .form button {
+    width: 190px;
+    height: 48px;
+
+    font-family: "Neogrotesk Ess";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+
+    margin-top: 1.5%;
+  }
+}
 
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 .modalContent {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
 }
 
 .close {
